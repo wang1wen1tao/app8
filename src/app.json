@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/sellprice/main",
+    "pages/buydetail/main",
+    "pages/index/main",
+    "pages/aledyPrice/main",
+    "pages/sureorderPrice/main",
+    "pages/sureOrder/main",
+    "pages/yuyindetail/main",
+    "pages/placedetail/main",
+    "pages/buypiaoju/main",
+    "pages/buysuccess/main",
+    "pages/yuyuesuccess/main",
+    "pages/update/main",
+    "pages/yuyue/main",
+    "pages/yuyin/main",
+    "pages/active/main",
+    "pages/luxian/main" ,
+    "pages/car/main",
+    "pages/mineyueyue/main",
+    "pages/mine/main",
+    "pages/kefu/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c6e0a3",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
