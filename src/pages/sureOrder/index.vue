@@ -9,23 +9,22 @@
             </div>
             <p class="placeName">明孝陵语音讲解票</p>
           </div>
-          <div class="rowTwo">
-            <p class="userDate">使用日期</p>
-          </div>
-          <div class="rowTwo">
-            <p class="userDate">购买张数</p>
+        </div>
+        <div class="orderRight">
+          <div class="rowPrice">10￥</div>
+        </div>
+      </div>
+      <div class="orderItem">
+        <div class="orderLeft">
+          <div class="rowOne">
+            <div class="yuyinIcon">
+              <img src="/static/images/2008.png" alt>
+            </div>
+            <p class="placeName">明孝陵语音讲解票</p>
           </div>
         </div>
         <div class="orderRight">
           <div class="rowPrice">10￥</div>
-          <div class="rowTime">2019-05-18</div>
-          <div class="rownumber">
-            <div class="selnumber">
-              <div class="cutnumber">-</div>
-              <input type="text" value="0" class="number">
-              <div class="addnumber">+</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -33,7 +32,7 @@
       <div class="bottomLeft">
         <div class="jieSuai">
           <div class="heji">合计:</div>
-          <div class="hejiPrice">￥100</div>
+          <div class="hejiPrice">￥20</div>
         </div>
       </div>
       <div class="bottomRight">去结算</div>
@@ -48,11 +47,17 @@ export default {};
   width: 93.6%;
   margin: 14px auto;
   border-top: 5px solid #0c7a6c;
+ 
 }
 .orderItem {
-  height: 133px;
-  box-shadow: 0 0 5px #ccc;
+  height: 52px;
   display: flex;
+}
+.orderItem:nth-of-type(1){
+  border-bottom: 1px dashed #0c7a6c;
+}
+.orderItem:nth-of-type(2){
+  box-shadow: 0 0 5px #ccc;
 }
 .orderLeft {
   width: 234px;

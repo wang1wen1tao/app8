@@ -1,11 +1,9 @@
 <template>
   <div>
     <div class="navTab">
-      <li class="tab-item" @click="msg=0" :class="{'curl':msg===0}">散客预约</li>
-      <li class="tab-item" @click="msg=1" :class="{'curl':msg===1}">团体预约</li>
     </div>
     <div class="tab-conatiner">
-      <div v-show="msg===0" class="msgFrom">
+      <div class="msgFrom">
         <div class="fromContainer">
           <div class="from-group">
             <p class="cardtype">证件类型</p>
@@ -17,7 +15,7 @@
               <input type="number" placeholder="请输入证件号码">
             </div>
             <div class="sanjiao">
-              <img src="/static/images/22_21.png" alt srcset>
+              <img src="/static/images/22_07.png" alt srcset>
             </div>
           </div>
           <div class="from-group">
@@ -78,92 +76,9 @@
               </picker>
             </div>
           </div>
-          <div class="from-group">
-            <p class="cardtype">添加游客</p>
-            <div class="cardword">+添加游客</div>
-          </div>
         </div>
         <div class="btn">
           <img src="/static/images/207.png" alt srcset @click="success">
-        </div>
-      </div>
-      <div v-show="msg===1" class="msgFrom">
-        <div class="fromContainer">
-          <div class="from-group">
-            <p class="cardtype">旅 行 社</p>
-            <div class="cardword">
-              <input type="text" placeholder="请输入手机号码">
-            </div>
-          </div>
-          <div class="from-group">
-            <p class="cardtype">选择景区</p>
-            <div class="cardword">
-              <picker
-                mode="date"
-                :value="date"
-                start="2015-09-01"
-                end="2017-09-01"
-                bindchange="bindDateChange"
-              >
-                <div class="picker">{{date}}</div>
-              </picker>
-            </div>
-          </div>
-          <div class="from-group">
-            <p class="cardtype">入园日期</p>
-            <div class="cardword">
-              <picker
-                mode="date"
-                :value="date"
-                start="2015-09-01"
-                end="2017-09-01"
-                bindchange="bindDateChange"
-              >
-                <div class="picker">{{date}}</div>
-              </picker>
-            </div>
-            <div class="sanjiao">
-              <img src="/static/images/208.png" alt srcset>
-            </div>
-          </div>
-          <div class="from-group">
-            <p class="cardtype">入园时段</p>
-            <div class="cardword">
-              <picker
-                mode="time"
-                :value="time"
-                start="09:01"
-                end="21:01"
-                bindchange="bindTimeChange"
-              >
-                <div class="picker">{{time}}</div>
-              </picker>-
-               <picker
-                mode="time"
-                :value="time"
-                start="09:01"
-                end="21:01"
-                bindchange="bindTimeChange"
-              >
-                <div class="picker">{{time}}</div>
-              </picker>
-            </div>
-          </div>
-          <div class="from-group">
-            <p class="cardtype">游客人数</p>
-            <div class="cardword">
-              <input type="text" placeholder="请输入手机号码">
-            </div>
-          </div>
-          <div class="from-group">
-            <p class="cardtype">总&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数</p>
-            <div class="cardword">
-              <input type="text" placeholder="请输入手机号码">
-            </div>
-          </div>
-        </div>
-        <div class="btn">
-          <img src="/static/images/207.png" alt srcset @click="success1">
         </div>
       </div>
     </div>
@@ -173,7 +88,6 @@
 export default {
   data() {
     return {
-      msg: 0,
       date: "2016-09-01",
       time: "12:01"
     };
@@ -196,12 +110,6 @@ export default {
 .navTab {
   height: 40px;
   display: flex;
-}
-.tab-item {
-  width: 50%;
-  text-align: center;
-  font-size: 15px;
-  line-height: 36px;
 }
 .curl {
   color: #0c7a6c;

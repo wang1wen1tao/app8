@@ -9,11 +9,11 @@
        <p class="userwo">{{userQinan}}</p>
      </div>
      <div class="kefu">
-       <img src="/static/images/89.png" alt="">
+       <div class="kefuIcon">
+          <img src="/static/images/68.png"  alt srcset>
+       </div>
+       <p class="kText">客服</p>
      </div>
-    </div>
-    <div class="discount">
-      <img src="/static/images/22_03.png"  alt srcset>
     </div>
     <div class="minefoot">
       <div class="ItemMine">
@@ -22,6 +22,7 @@
         </div>
         <p class="itemWord">我的预约</p>
         <div class="sanjiao">></div>
+        <div class="raMsg">0</div>
       </div>
       <div class="ItemMine">
         <div class="iconImg">
@@ -29,6 +30,7 @@
         </div>
         <p class="itemWord">已购门票</p>
         <div class="sanjiao">></div>
+         <div class="raMsg">0</div>
       </div>
       <div class="ItemMine">
         <div class="iconImg">
@@ -36,36 +38,35 @@
         </div>
         <p class="itemWord">已购讲解</p>
         <div class="sanjiao">></div>
+         <div class="raMsg">0</div>
       </div>
       <div class="ItemMine">
-        <div class="iconImg1">
-          <img src="/static/images/22_16.png" alt="icon" srcset>
+        <div class="iconImg">
+          <img src="/static/images/carzi.png" alt="icon" srcset>
         </div>
-        <p class="itemWord1">优惠券</p>
-        <p class="itemword2">您有3张优惠券即将过期</p>
-        <div class="sanjiao3">></div>
+        <p class="itemWord1">我的购物车</p>
+        <div class="sanjiao2">></div>
       </div>
       <div class="ItemMine">
-        <div class="iconImg1">
-          <img src="/static/images/22_16.png" alt="icon" srcset>
-        </div>
-        <p class="itemWord1">我的收藏</p>
-        <div class="sanjiao1">></div>
-      </div>
-      <div class="ItemMine">
-        <div class="iconImg1">
-          <img src="/static/images/22_16.png" alt="icon" srcset>
+        <div class="iconImg">
+          <img src="/static/images/22_18.png" alt="icon" srcset>
         </div>
         <p class="itemWord1">常用联系人</p>
         <div class="sanjiao2">></div>
       </div>
     </div>
+     <tar-bar :selectNavIndex="0"></tar-bar>
   </div>
 </template>
 
 <script>
 import userInfo from '../../utils/index' 
+import tarBar from '@/components/tarbar'
 export default {
+ 
+  components:{
+    tarBar,
+  },
   data() {
     return {
        useravaTer:'',
@@ -75,10 +76,8 @@ export default {
   },
   onLoad(){
     let userName = userInfo.userInfo.username;
-    let userQinan = userInfo.userInfo.userQinan;
     let useravaTer =  userInfo.userInfo.useravaTer
     this.userName = userName;
-    this.userQinan =userQinan;
     this.useravaTer = useravaTer;
   },
   methods: {
@@ -99,12 +98,13 @@ export default {
 }
 .username{
   font-size: 18px;
-  line-height: 46px;
+  line-height: 80px;
 }
 .mineTop {
   width: 100%;
   height: 160px;
   display: flex;
+  position: relative;
 }
 .userAvater{
   width: 74px;
@@ -117,8 +117,12 @@ export default {
 .kefu{
   width: 67px;
   height: 32px;
-  margin-left: 6px;
+  background: #0c7a6c;
+  margin-left: 8.5px;
   margin-top: 41px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
 }
 .avaImg{
   border-radius: 50%;
@@ -126,8 +130,7 @@ export default {
 .discount {
   width: 84%;
   height: 63px;
-  position: fixed;
-  z-index: 1;
+  position: absolute;
   top: 126px;
   left: 32px;
   margin: 0 auto;
@@ -140,11 +143,12 @@ export default {
 .ItemMine {
   height: 51px;
   display: flex;
+  position: relative;
 }
 .iconImg {
-  margin-top: 10px;
-  width: 27px;
-  height: 30px;
+  margin-top: 12px;
+  width: 16px;
+  height: 18px;
   margin-left: 16px;
 }
 .itemWord {
@@ -165,12 +169,6 @@ img {
   line-height: 17px;
   font-size: 13px;
   color: #cccccc;
-}
-.iconImg1 {
-  width: 24px;
-  height: 19px;
-  margin-top: 12px;
-  margin-left: 22px;
 }
 .itemWord1 {
   font-size: 14px;
@@ -212,5 +210,31 @@ img {
   color: #0c7a6c;
   line-height: 44px;
   margin-left: 44px;
+}
+.kefuIcon{
+  width: 18px;
+  height: 22px;
+  position: absolute;
+  top:5px;
+  left: 11px;
+}
+.kText{
+  color:#fff;
+  font-size: 15px;
+  position: absolute;
+  top:6px;
+  left: 30px;
+}
+.raMsg{
+  width: 15px;
+  height: 15px;
+  background: #f6705a;
+  font-size: 12px;
+  color:#fff;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top:7px;
+  left: 23px;
 }
 </style>

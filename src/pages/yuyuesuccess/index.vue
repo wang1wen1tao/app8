@@ -25,13 +25,12 @@
     <div class="successMap">
       <img src="/static/images/216.png" alt>
     </div>
-    <p class="title">钟山龙蟠，石头虎踞，领略不一样的钟山风光</p>
-    <div class="nullline"></div>
     <div class="successfoot">
       <div class="navconTop">
         <div class="conImg">
           <img src="/static/images/222.png" alt srcset>
         </div>
+         <div class="dis">特别推荐</div>
         <div class="context">
           <h1 class="titleHeader">必去景点一网打尽·从明朝穿越到民国</h1>
           <p class="conword">
@@ -69,6 +68,7 @@
         <div class="conImg">
           <img src="/static/images/223.png" alt srcset>
         </div>
+        <div class="dis">特别推荐</div>
         <div class="context">
           <h1 class="titleHeader">访古瞻仰休闲游</h1>
           <p class="conword">
@@ -153,6 +153,7 @@ export default {
   margin: 28px auto;
   height: 134px;
   display: flex;
+  position: relative;
 }
 img {
   width: 100%;
@@ -161,6 +162,17 @@ img {
 .conImg {
   width: 93px;
   background: #ccc;
+}
+.dis{
+  width: 68px;
+  height: 22px;
+  background:#0c7a6c ;
+  position: absolute;
+  top:0px;
+  font-size: 14px;
+  margin-left: 1px;
+  color:#fff;
+  border-bottom-right-radius: 35px;
 }
 .context {
   width: 252px;
@@ -212,11 +224,14 @@ img {
   margin-left: 8px;
   margin-top: 14px;
   display: flex;
+  position: relative;
 }
 .imgIconItem {
   width: 17px;
   height: 13px;
+ 
 }
+
 .spa {
   margin-left: 20px;
 }

@@ -26,9 +26,6 @@ export default {
   },
   log () {
     console.log(`log at:${Date.now()}`)
-  },
-  onShow(){
-    console.log("wwedwedwe");
   }
 }
 </script>
@@ -36,9 +33,10 @@ export default {
 <style>
 .container {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+}
+img{
+  width: 100%;
+  height: 100%;
 }
 /* this rule will be remove */
 * {
@@ -47,9 +45,4 @@ export default {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
-img{
-  width: 100%;
-  height: 100%;
-}
 </style>
-

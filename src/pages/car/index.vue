@@ -3,7 +3,7 @@
     <div class="box">
       <div class="carTop">
         <p class="count">共3张</p>
-        <p class="managar">管理</p>
+        <p class="managar" @click="manager">管理</p>
       </div>
       <div class="shopList">
         <div class="shopItem" v-for="item in shopList" :data="index" :key="item">
@@ -17,12 +17,18 @@
             </div>
           </div>
           <div class="rightcenter">
-            <div class="delIcon">
+            <div :class="flage?'Hidden':'delIcon'">
               <div class="iconImg">
                 <img src="/static/images/10_06.png" alt srcset>
               </div>
             </div>
             <div class="textTime">
+              <div class="iconImgs">
+                <img src="/static/images/10_27.png" alt srcset>
+              </div>
+              <p class="timeDuan">{{item.timeDuan1}}</p>
+            </div>
+              <div class="textTime">
               <div class="iconImgs">
                 <img src="/static/images/10_27.png" alt srcset>
               </div>
@@ -64,7 +70,8 @@ import CarList from '../../utils/index'
 export default {
   data() {
     return {
-      shopList:[]
+      shopList:[],
+      flage:false,
     }
   },
   onShow(){
@@ -73,7 +80,14 @@ export default {
       this.shopList[i] = res[i];
     }
   },
-  methods: {}
+  methods: {
+    manager(){
+       console.log(this.flage);
+       if(this.flage == false){
+         this.flage = !this.flage
+       }
+    }
+  }
 };
 </script>
 
@@ -102,6 +116,7 @@ export default {
   right: 0;
   top: 9px;
 }
+
 .carBottom {
   width: 99%;
   height: 62px;
@@ -124,7 +139,7 @@ export default {
 }
 .leftBorder {
   width: 21px;
-  height: 128px;
+  height: 146px;
   margin-top: 12px;
 }
 .centerImg {
@@ -138,7 +153,7 @@ export default {
 }
 .placeImg {
   width: 125px;
-  height: 80px;
+  height: 104px;
   margin-top: 8px;
 }
 .rightcenter {
@@ -149,6 +164,11 @@ export default {
 .delIcon {
   height: 28px;
   position: relative;
+}
+.Hidden{  
+  height: 28px;
+  position: relative;
+  visibility: hidden;
 }
 .iconImg {
   width: 17px;

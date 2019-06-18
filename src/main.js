@@ -1,8 +1,14 @@
 import Vue from 'vue'
-import App from './App' 
-import { Button, Select } from 'element-ui';
+import App from './App'
+import '../static/weui/weui.css'
+import Fly from 'flyio/dist/npm/wx'
+
+const fly=new Fly()
+Vue.prototype.flyIO = fly  //this.flyIO
 Vue.config.productionTip = false
 App.mpType = 'app'
+
 const app = new Vue(App)
-Vue.use(Button)
 app.$mount()
+
+Vue.prototype.globalData = getApp().globalData   //page中用 this.globalData

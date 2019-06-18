@@ -146,6 +146,79 @@
           </div>
         </div>
       </div>
+      <div class="rowyueyin">
+        <div class="yueyinOne">
+          <p class="yueyinText">语音讲解</p>
+          <p class="smallyuyin">（您可以同时购买景区相关讲解）</p>
+        </div>
+        <div class="yuwyinTwo">
+          <div class="changeBtn">
+            <div class="BtnItem">
+              <div class="buttonPlace sssl">明孝陵</div>
+              <p class="placePrice sls">
+                <span class="dianwei3">￥</span>100
+              </p>
+            </div>
+            <div class="BtnItem lsl">
+              <div class="buttonPlace">明孝陵</div>
+              <p class="placePrice sls">
+                <span class="dianwei3">￥</span>100
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rowPricemsg so1">
+      <div class="rowOne1">
+        <p class="priceMsg">购票人信息</p>
+      </div>
+      <div class="rowItem">
+        <div class="colleft">
+          <p class="itemName">证件类型</p>
+        </div>
+        <div class="colright">
+          <p class="typeText">身份证</p>
+        </div>
+      </div>
+      <div class="rowItem">
+        <div class="colleft">
+          <p class="itemName">姓名</p>
+        </div>
+        <div class="colright">
+          <p class="typeText">张晓雪</p>
+        </div>
+      </div>
+      <div class="rowItem">
+        <div class="colleft">
+          <p class="itemName">证件号码</p>
+        </div>
+        <div class="colright">
+          <p class="typeText">11058978785689</p>
+        </div>
+      </div>
+      <div class="rowItem">
+        <div class="colleft">
+          <p class="itemName">联系电话</p>
+        </div>
+        <div class="colright">
+          <p class="typeText">18898878987</p>
+        </div>
+      </div>
+    </div>
+    <div class="carBottom">
+      <div class="bottomLeft">
+        <div class="jieSuai">
+          <div class="heji">合计:</div>
+          <p class="hejiPrice">
+            <span class="dianwei">￥</span>110
+          </p>
+        </div>
+        <div class="buyBtn">立即购买</div>
+        <div class="addcar">
+             <img src="/static/images/803.png" alt="">
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -244,6 +317,9 @@ img {
   box-shadow: 0 0 3px #ccc;
   margin-top: 15px;
 }
+.lsl {
+  margin-left: 31px;
+}
 .soundText {
   font-size: 14px;
   color: #333;
@@ -301,6 +377,11 @@ img {
 .colTime {
   width: 64px;
   border: 0.5px solid #ccc;
+}
+.placePrice {
+  font-size: 15px;
+  line-height: 30px;
+  margin-left: 11px;
 }
 .colword {
   text-align: center;
@@ -410,5 +491,177 @@ img {
   text-align: center;
   font-size: 18px;
   border: 1px solid #ccc;
+}
+.rowyueyin {
+  height: 115px;
+  box-shadow: 0 0 1px #ccc;
+}
+.yueyinOne {
+  width: 324.5px;
+  margin: 0 auto;
+  height: 50%;
+  border-bottom: 1px dashed #0c7a6c;
+  display: flex;
+}
+.yueyinText {
+  font-size: 15px;
+  color: #0c7a6c;
+  margin-top: 30px;
+}
+.smallyuyin {
+  color: #999999;
+  font-size: 12px;
+  margin-top: 30px;
+}
+.yuwyinTwo {
+  display: flex;
+}
+.changeBtn {
+  width: 252.5px;
+  height: 31px;
+  margin-top: 16px;
+  display: flex;
+  margin-left: 13px;
+}
+.BtnItem {
+  width: 125px;
+  height: 30px;
+  display: flex;
+}
+.buttonPlace {
+  width: 75px;
+  text-align: center;
+  color: #666666;
+  font-size: 12px;
+  line-height: 30px;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #ccc;
+}
+
+.sls {
+  color: #0c7a6c;
+}
+.sssl {
+  border: 1px solid #0c7a6c;
+  background: #0c7a6c;
+  color: #fff;
+}
+.rowPricemsg {
+  height: 180px;
+  box-shadow: 0 0 5px #ccc;
+  margin-top: 15px;
+}
+.rowOne1 {
+  width: 310px;
+  height: 20%;
+  border-bottom: 1px dashed #0c7a6c;
+  margin: 0 auto;
+  display: flex;
+}
+.priceMsg {
+  font-size: 13px;
+  color: #333;
+  line-height: 33.5px;
+}
+.rowItem {
+  width: 310px;
+  height: 20%;
+  margin: 0 auto;
+  display: flex;
+}
+.itemName,
+.placeItem1 {
+  font-size: 12px;
+  color: #656666;
+  line-height: 37.5px;
+}
+.placeItem1 {
+  color: #0c7a6c;
+}
+.lis {
+  margin-left: 91px;
+}
+.colleft {
+  width: 52px;
+}
+.colright {
+  width: 242px;
+}
+.typeText {
+  font-size: 12px;
+  line-height: 37.5px;
+  text-align: center;
+}
+.selnumber {
+  width: 100px;
+  height: 30px;
+  display: flex;
+}
+.cutnumber,
+.number,
+.addnumber {
+  width: 38px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+}
+.so1 {
+  margin-bottom: 80px;
+}
+.carBottom {
+  width: 99%;
+  height: 62px;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  border-top: 2px solid #0c7a6c;
+  display: flex;
+}
+.bottomLeft {
+  width: 100%;
+  display: flex;
+  background: #fff;
+}
+.bottomRight {
+  width: 106px;
+  height: 100%;
+  background: #0c7a6c;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  line-height: 64px;
+}
+.jieSuai {
+  display: flex;
+}
+.heji {
+  font-size: 15px;
+  line-height: 62px;
+  margin-left: 10px;
+}
+.hejiPrice {
+  line-height: 62px;
+  color: #0c7a6c;
+  font-size: 29px;
+  margin-left: 8px;
+}
+.buyBtn {
+  font-size: 18px;
+  color: #0c7a6c;
+  text-align: center;
+  width: 133.5px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-left: 48px;
+  border: 1px solid #0c7a6c;
+}
+.addcar{
+  width: 39px;
+  height: 40px;
+  margin-left: 11px;
+  margin-top: 11px
 }
 </style>

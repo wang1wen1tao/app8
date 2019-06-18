@@ -22,9 +22,6 @@
             <p class="price">¥100</p>
           </div>
         </div>
-        <div class="lianxi">
-          <img src="/static/images/106.png" alt class="laImg">
-        </div>
       </div>
       <!--<div class="piaoItem">
         <div class="itemBorder">
@@ -137,23 +134,21 @@
         </div>
       </div>-->
     </div>
-    <Tarbar>{{msg}}</Tarbar>
+    <tar-bar :selectNavIndex="0"></tar-bar>
   </div>
 </template>
 
 <script>
-import tarbar from '@/components/tabBar'
+ import tarBar from '@/components/tarbar'
 export default {
-  data() {
-    return {
-        msg:'assda'
-    };
-  },
-   onShow(){
-      console.log(this.$emit)
-  },
+ 
   components:{
-   tarbar
+    tarBar,
+  },
+  data() {
+    return{
+      
+    }
   },
   methods: {
     jumppioawu(){
@@ -182,7 +177,6 @@ export default {
 .itemImg {
   width: 87px;
   height: 84px;
-  background: green;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 14px;
@@ -199,12 +193,6 @@ export default {
 }
 .whenWord {
   margin-left: 11px;
-}
-.lianxi {
-  width: 30px;
-  height: 15px;
-  margin-left: 12px;
-  margin-top: 14px;
 }
 .itemCenter {
   width: 100%;

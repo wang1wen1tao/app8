@@ -1,24 +1,24 @@
-const userInfo = {
-  username: '王小山',
-  userQinan: '趁着现在有时间，想去哪玩就去哪玩',
-  useravaTer: '/static/images/avater.png'
+function formatNumber (n) {
+  const str = n.toString()
+  return str[1] ? str : `0${str}`
 }
-const CarList = [
-  {
-    id: 0,
-    place: '钟山风景区套票',
-    imgUrl: '/static/images/10_10.png',
-    timeDuan1: '8:00 — — 16:00',
-    timeDuan2: '8:00 — — 16:00',
-  },
-  {
-    id: 1,
-    place: '偷得浮生·畅游钟山',
-    imgUrl: '/static/images/10_10.png',
-    timeDuan1: '7:00 — — 16:00',
-    timeDuan2: '8:00 — — 16:00',
-  }
-]
+
+export function formatTime (date) {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  const t1 = [year, month, day].map(formatNumber).join('/')
+  const t2 = [hour, minute, second].map(formatNumber).join(':')
+
+  return `${t1} ${t2}`
+}
+
 export default {
-  userInfo, CarList
+  formatNumber,
+  formatTime
 }

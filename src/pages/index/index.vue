@@ -4,7 +4,7 @@
       <div class="boxItem" @click="jumpToactive">
         <img src="/static/images/102.png" alt srcset>
       </div>
-      <div class="boxItemTwo" >
+      <div class="boxItemTwo" @click="jumpToyuying">
         <div class="boxtwoTop">
           <div class="iconImg">
             <img src="/static/images/61.png" alt srcset>
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="boxItemThree">
+      <div class="boxItemThree" @click="jumpToluxian">
         <div class="boxthreeTop">
           <div class="threeIcon">
             <img src="/static/images/66.png" alt srcset>
@@ -86,7 +86,7 @@
           </div>
         </div>
       </div>
-      <div class="boxFive">
+      <div class="boxFive" @click="jumpToyuyue">
         <div class="boxfiveTop">
           <div class="IconImgs">
             <img src="/static/images/60.png" alt srcset>
@@ -100,13 +100,13 @@
           </div>
         </div>
       </div>
-      <div class="boxSix">
+      <div class="boxSix" @click="jumpTomine">
         <div class="sixIcon">
           <img src="/static/images/64.png" alt srcset>
         </div>
         <p class="sixText">个人中心</p>
       </div>
-      <div class="boxSeven">
+      <div class="boxSeven" @click="jumpTonew">
         <div class="sevenIcon">
           <img src="/static/images/65.png" alt srcset>
         </div>
@@ -120,9 +120,7 @@
 export default {
   data() {
     return {
-      userMsg: [],
       Height: "",
-      Boxheight: ""
     };
   },
   onShow() {
@@ -140,6 +138,21 @@ export default {
     jumpTosellprice(){
       console.log('asa')
       wx.navigateTo({ url: '../sellprice/main' });
+    },
+    jumpToyuying(){
+      wx.navigateTo({ url: '../yuyin/main' });
+    },
+    jumpToyuyue(){
+       wx.navigateTo({ url: '../yuyue/main' });
+    },
+    jumpToluxian(){
+      wx.navigateTo({ url: '../luxian/main' });
+    },
+    jumpTomine(){
+      wx.navigateTo({ url: '../mine/main' });
+    },
+    jumpTonew(){
+      wx.navigateTo({ url: '../new/main' });
     }
   },
 };
@@ -276,8 +289,8 @@ export default {
   bottom: 23%;
 }
 .messCount {
-  width: 20%;
-  height: 21%;
+  width: 41px;
+  height: 41px;
   background: #f6705a;
   border-radius: 50%;
   position: absolute;
